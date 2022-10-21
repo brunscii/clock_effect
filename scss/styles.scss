@@ -1,0 +1,64 @@
+$digit-height: 1.5rem;
+
+body{
+    background-color: orangered;
+    color : rgba(0, 0, 0, 0.575);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: $digit-height;
+}
+
+@for $i from 0 through 9{
+    .digit-#{$i}{
+        position: absolute;
+        top: calc($i * 2)rem;
+        z-index: $i;
+    }
+}
+
+@for $i from 1 through 2{
+    .hour-digit-#{$i},.minutes-digit-#{$i},.seconds-digit-#{$i}{
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.336);
+        border: 1px solid black;
+    }
+    
+}
+
+
+.hour-digits,.minute-digits,.second-digits{
+
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    height: 2rem;
+    width: 2.2rem;
+    align-items: baseline;
+    display:flex;
+    background: rgba(26, 53, 28, 0.507);
+    overflow: hidden;
+
+    span{
+        position: relative;
+    }
+    
+}
+
+.minute-digits{
+    left: 19%
+}
+.second-digits{
+    left: 23%
+}
+// .minute-digits{
+//     display: flex;
+//     left: 20%;
+//     top: 5%;
+//     height: 2rem;
+//     width: 2.2rem;
+//     position: absolute;
+    
+
+//     span{
+//         position: relative;
+//     }
+// }
