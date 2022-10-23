@@ -9,21 +9,19 @@ body{
 
 .clock-body{
     display: flex;
-    justify-content:center;
-    align-items: center;
-    width: 100%;
+    width: 8vw;
     height: 100%;
+    border: 1px solid black;
+    align-items: center;
+    justify-content:center;
 }
 
 .hour-digits,.minute-digits,.second-digits{
     height: 2rem;
     width: 2.2rem;
     align-items: baseline;
-    display:flex;
+    justify-content: center;
+    display: flex;
     background: rgba(26, 53, 28, 0.507);
-    overflow: hidden;
-    span{
-        position: relative;
-    }
-    
+
 }
